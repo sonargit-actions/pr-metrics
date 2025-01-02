@@ -29,12 +29,17 @@ async function run() {
       ...metricsArgs,
     };
     if (metricsApi) {
+      let headers = {
+        'Content-Type': 'application/json',
+      }
+      const apiKeySplit = metricsApi.split('apiKey=');
+      if (apiKeySplit.length === 2) {
+        headers['X-API-Key'] = apiKeySplit[1];
+      }
       const [err] = await to(
         fetch(metricsApi, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers,
           body: JSON.stringify(metricsObj),
         })
       );
@@ -44,7 +49,7 @@ async function run() {
     }
     core.exportVariable('METRICS_OUTPUT', JSON.stringify(metricsObj, null, 2));
     return core.info('Update CI/CD Data');
-  } catch (e) {}
+  } catch (e) { }
 }
 
 run();
