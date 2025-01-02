@@ -13,6 +13,10 @@
     "workflow",
     "actions"
   ],
+  "engines": {
+    "npm": ">=10.8.2",
+    "node": ">=20.18.1"
+  },
   "author": "axlrommel",
   "license": "ISC",
   "dependencies": {
