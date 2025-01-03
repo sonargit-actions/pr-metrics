@@ -32,7 +32,7 @@ async function run() {
       let headers = {
         'Content-Type': 'application/json',
       }
-      const apiKeySplit = metricsApi.split('apiKey=');
+      const apiKeySplit = metricsApi.split('sonargitApiKey=');
       if (apiKeySplit.length === 2) {
         headers['X-API-Key'] = apiKeySplit[1];
       }
