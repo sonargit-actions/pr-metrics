@@ -7,7 +7,7 @@ This GitHub Action captures detailed information about a pull request whenever i
 ## 🚀 Features
 
 - Automatically triggered on pull request events: `opened`, `closed`, and `reopened`.
-- Captures pull request metadata such as branch name, .
+- Captures pull request metadata such as branch name, and dates as to when a PR was opened, closed and merged.
 - Outputs the data as a JSON object for easy integration into other workflows.
 - Can integrate seamlessly with [SonarGit](https://sonargit.com) for insights and analysis (Optional)
 
