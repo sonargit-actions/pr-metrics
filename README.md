@@ -36,6 +36,7 @@ jobs:
       - name: Collect Metrics
         uses: sonargit-actions/pr-metrics/actions/pr-metrics@v1
         with:
+          # optional url for capturing data sent as POST request
           # metrics-api: ${{vars.METRICS_API}}
           log-results: true
 ```
