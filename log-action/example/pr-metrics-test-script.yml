@@ -4,8 +4,6 @@ on:
   pull_request:
     types: [opened, reopened, closed]
     branches: [main]
-env:
-  NODE_VERSION: '20.x'
 jobs:
   capture-pr-info:
     runs-on: ubuntu-latest
