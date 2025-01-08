@@ -7,9 +7,9 @@ This GitHub Action captures detailed information about a pull request whenever i
 ## 🚀 Features
 
 - Automatically triggered on pull request events: `opened`, `closed`, and `reopened`.
-- Captures pull request metadata such as title, description, author, labels, and more.
+- Captures pull request metadata such as branch name, and dates as to when a PR was opened, closed and merged.
 - Outputs the data as a JSON object for easy integration into other workflows.
-- Integrates seamlessly with [SonarGit](https://sonargit.com) for insights and analysis.
+- Can integrate seamlessly with [SonarGit](https://sonargit.com) for insights and analysis (Optional)
 
 ---
 
@@ -34,7 +34,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Collect Metrics
-        uses: sonar-git/pr-metrics/actions/pr-metrics@v1
+        uses: sonargit-actions/pr-metrics/actions/pr-metrics@v1
         with:
           # metrics-api: ${{vars.METRICS_API}}
           log-results: true
+```
+
+
+
