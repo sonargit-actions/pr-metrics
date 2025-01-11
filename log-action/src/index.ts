@@ -15,17 +15,13 @@ async function run() {
     const repositoryName = context.payload.repository?.full_name?.substring(
       `${metricsArgs.owner}/`.length
     );
-    const runId = context.runId;
-    const jobName = context.job;
     const metricsObj = {
       repositoryName,
       status,
       branchName,
-      runId,
       pullRequestType,
       merged,
       uses,
-      currentJob: jobName,
       ...metricsArgs,
     };
     if (metricsApi) {
