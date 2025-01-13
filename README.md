@@ -27,6 +27,7 @@ name: Capture Pull Request Info
 on:
   pull_request:
     types: [opened, closed, reopened]
+    # usually main or master, depending on your repo
     branches: [main]
 
 jobs:
