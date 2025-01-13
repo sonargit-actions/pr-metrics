@@ -3,6 +3,7 @@ name: PR Metrics Script
 on:
   pull_request:
     types: [opened, reopened, closed]
+    # usually main or master depending on your repo
     branches: [main]
 jobs:
   capture-pr-info:
